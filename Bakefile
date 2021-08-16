@@ -1,0 +1,4 @@
+reset:
+    rm prisma/dev.*
+    yarn run prisma db push
+    yarn importer

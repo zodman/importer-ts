@@ -1,0 +1,22 @@
+{
+  "name": "importer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "importer": "yarn run ts-node importer.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^16.6.1",
+    "prisma": "2.29.1",
+    "ts-node": "^10.2.0",
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "@prisma/client": "2.29.1",
+    "@types/lodash": "^4.14.172",
+    "csv-parse": "^4.16.0",
+    "lodash": "^4.17.21",
+    "tslog": "^3.2.0"
+  }
+}

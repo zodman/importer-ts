@@ -1,0 +1,54 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model noc {
+  id Int @id @default(autoincrement())
+  name String @unique
+  entries entry[]
+}
+
+model province {
+  id Int @id @default(autoincrement())
+  name String @unique
+  cities city[]
+}
+
+
+model city {
+  id Int @id @default(autoincrement())
+  name String @unique
+  province province @relation(fields:[province_id], references:[id])
+  province_id Int
+  entries entry[]
+}
+
+model company {
+  id  Int @id @default(autoincrement())
+  name String @unique
+  entries entry[]
+}
+
+model entry {
+  id  Int @id @default(autoincrement())
+  positions Int
+  noc noc @relation(fields:[noc_id], references:[id])
+  noc_id Int
+  company company @relation(fields: [company_id], references:[id])
+  company_id Int
+  city city @relation(fields:[city_id], references:[id])
+  city_id Int
+  year Int
+  phase String
+  company_address String
+  company_zipcode String
+  @@unique([positions, noc_id, company_id, city_id, year, phase, company_address, company_zipcode])
+}
