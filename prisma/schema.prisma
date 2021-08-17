@@ -50,5 +50,5 @@ model entry {
   phase String
   company_address String
   company_zipcode String
-  @@unique([positions, noc_id, company_id, city_id, year, phase, company_address, company_zipcode])
+  @@unique(name:"identify", fields:[positions, noc_id, company_id, city_id, year, phase, company_address, company_zipcode])
 }
