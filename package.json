@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "importer": "yarn run ts-node importer.ts"
+    "importer": "yarn run ts-node importer/index.ts"
   },
   "devDependencies": {
     "@types/node": "^16.6.1",
@@ -17,6 +17,7 @@
     "@types/lodash": "^4.14.172",
     "csv-parse": "^4.16.0",
     "lodash": "^4.17.21",
+    "nqdm": "^2.0.2",
     "tslog": "^3.2.0"
   }
 }

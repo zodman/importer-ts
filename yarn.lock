@@ -106,6 +106,11 @@ make-error@^1.1.1:
   resolved "https://registry.yarnpkg.com/make-error/-/make-error-1.3.6.tgz#2eb2e37ea9b67c4891f684a1394799af484cf7a2"
   integrity sha512-s8UhlNe7vPKomQhC1qFelMokr/Sc3AgNbso3n74mVPA5LTZwkB9NlXf4XPamLxJE8h0gh73rM94xvwRT2CVInw==
 
+nqdm@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/nqdm/-/nqdm-2.0.2.tgz#323d7a288818775080e13d3e0c03239e28d93dc0"
+  integrity sha512-f3hALr7ajs2TOn00znDTgo9PKyaTg1QrLZKcPDdFvfPNC0hUnImL4GTb4uqSS6Usms/gfCFKy2ZO+x2BEoMcEA==
+
 prisma@2.29.1:
   version "2.29.1"
   resolved "https://registry.yarnpkg.com/prisma/-/prisma-2.29.1.tgz#7845f55c7f09955b01f973c6a4b1f330cb212e7d"

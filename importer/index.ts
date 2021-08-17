@@ -1,6 +1,6 @@
 import { PrismaClient } from '@prisma/client'
-import   ReaderCSV    from './lib/reader'
-import  Processor  from './lib/process'
+import   ReaderCSV    from './reader'
+import  Processor  from './process'
 import { Logger } from 'tslog'
 
 const log : Logger = new Logger()
@@ -18,7 +18,7 @@ async function main() {
 }
 
 
-main()
+main().then()
     .catch(e=>{
         throw e
     })

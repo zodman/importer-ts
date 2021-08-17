@@ -1,12 +1,11 @@
 import csvParse from 'csv-parse'
 import * as fs from 'fs'
 
+import { Logger } from 'tslog'
 
-export interface IReader {
-  open(): Promise<any[]>
-}
+const log : Logger = new Logger()
 
-class ReaderCSV implements IReader {
+class ReaderCSV {
     private filepath: string
 
     constructor(filepath: string) {
@@ -15,11 +14,12 @@ class ReaderCSV implements IReader {
 
     async open () {
       let results: any[] = []
+      log.info("proccesing csv")
       const parser = fs.createReadStream(this.filepath).pipe(csvParse({ columns: true}))
       for await ( const row of parser ) {
         results.push(row)
       }
-      return results 
+      return results
     }
 }
 
