@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "download-csv": "curl 'https://lmia.work/all/all.csv?_dl=on&_stream=on&_size=max' -o all.csv ",
     "importer": "yarn run ts-node importer/index.ts"
   },
   "devDependencies": {
@@ -15,7 +16,11 @@
   "dependencies": {
     "@prisma/client": "2.29.1",
     "@types/lodash": "^4.14.172",
+    "apollo-server": "^3.1.2",
+    "apollo-server-express": "^3.1.2",
     "csv-parse": "^4.16.0",
+    "express": "^4.17.1",
+    "graphql": "^15.5.1",
     "lodash": "^4.17.21",
     "nqdm": "^2.0.2",
     "tslog": "^3.2.0"

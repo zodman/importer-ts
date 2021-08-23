@@ -1,5 +1,6 @@
 import csvParse from 'csv-parse'
 import * as fs from 'fs'
+import nqdm from 'nqdm'
 
 import { Logger } from 'tslog'
 
