@@ -24,6 +24,7 @@ class Processor {
     results = results.map(this.transform)
     const prisma = this.prismaClient
     let e: any
+    log.info("Init database insert")
     for await (const entry of nqdm(results)) {
       e = new ProcessEntry(entry, prisma)
       await e.execute()

@@ -20,6 +20,7 @@ class ReaderCSV {
       for await ( const row of parser ) {
         results.push(row)
       }
+      log.info("processing finished")
       return results
     }
 }
